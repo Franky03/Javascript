@@ -64,6 +64,57 @@ document.getElementById('meu-submit').onclick = function(e){
     e.preventDefault();
 }
 
+// Função que realiza uma tarefa, não devolve nada
+
+function dizerNome(){
+    console.log('Nome');
+}
+
+dizerNome();
+
+function MultiplicarPorDois(valor){
+    return valor * 2;
+}
+
+let resultado= MultiplicarPorDois(5);
+
+console.log(resultado);
+
+//Operadores Aritméticos
+let salario=100;
+console.log(++salario);
+
+//Operadores Atribuição
+
+let valorTecl= 100; // O igual é um operador de atribuição
+
+//Operadores de Comparação
+ console.log(1===1); //Além de comparar os valores está comparando também os tipos
+ console.log(1 === '1'); // Vai dar falso
+
+ console.log(1 == '1'); // Vai comparar somente os valores
+ 
+ //Usarr somente com três iguais é melhor
+
+//Operador Ternário
+ let pontos = 100;
+ let tipo = pontos > 100 ? 'premium' : 'comum';
+
+ console.log(tipo);
+//Operadores Lógicos
+
+ console.log(false && true);
+ console.log(true || false);
+ console.log(!false);
+
+//Falsy
+// Undefined, null, 0, false, '', NaN- not a number
+//Truthy
+// O resto
+
+let corPersonalizada= 'vermelho';
+let corPadrao= 'gray';
+let corPerfil= corPersonalizada||corPadrao; //Para no primeiro por curto circuito
 
 
-
+console.log(corPerfil);
