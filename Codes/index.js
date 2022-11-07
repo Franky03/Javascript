@@ -44,6 +44,8 @@ let nomeAmigo= ['Pessoa', 23, 'Cubatão'];
 
 // Função (Verbo + Substantivo)
 
+/*
+
 let corSite= 'gray';
 let fundo= document.getElementById('pagina');
 
@@ -63,6 +65,7 @@ document.getElementById('meu-submit').onclick = function(e){
     mudaCor();
     e.preventDefault();
 }
+*/
 
 // Função que realiza uma tarefa, não devolve nada
 
@@ -118,3 +121,105 @@ let corPerfil= corPersonalizada||corPadrao; //Para no primeiro por curto circuit
 
 
 console.log(corPerfil);
+
+//If else and Switch case 
+let condition= 10;
+
+if (condition>=5) {
+    console.log(condition);
+} else if(condition<5 && condition>=3){
+    console.log(condition);
+} else{
+    condition= 12;
+}
+
+let input= 6;
+
+switch(input){
+    case 1:
+        input = 10;
+        console.log(input);
+        break;
+    case 2:
+        input+=1;
+        console.log(input);
+        break;
+    case 5:
+        input-=1;
+        console.log(input);
+        break;
+
+    default:
+        console.log("Nenhum caso.");
+}
+
+//For
+
+for (let i=0; i<5; i++){
+    console.log("Laço For");
+}
+
+// While
+
+/*
+
+while(true){
+    input++;
+    console.log(input);
+    if(input>12){
+        break;
+    }
+}
+*/
+
+input=6;
+// Do while
+
+/*
+do{
+    console.log(++input);
+}while(input<12);
+
+*/
+
+//For-in
+
+console.log("FOR IN");
+
+const personagem = {
+    nome: 'Jonata',
+    idade: 25,
+    poder: 'Força',
+}
+
+for(let chave in personagem){
+    console.log(chave, personagem[chave]);
+}
+
+const cores= ["vermelho", "azul", "verde"];
+
+for(let indice in cores){
+    console.log(indice, cores[indice]);
+}
+
+//For-of
+
+console.log("FOR OF");
+
+for(let cor of cores){
+    console.log(cor);
+}
+
+// Máximo entre valores
+
+function maxArray(array){
+    maior= array[0];
+    for(value of array){
+        if (value> maior){
+            maior= value;
+        }
+    }
+    return maior;
+}
+
+console.log(maxArray([1,5,7,4,2,3]));
