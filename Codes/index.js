@@ -213,7 +213,7 @@ for(let cor of cores){
 // Máximo entre valores
 
 function maxArray(array){
-    maior= array[0];
+    let maior= array[0];
     for(value of array){
         if (value> maior){
             maior= value;
@@ -223,3 +223,75 @@ function maxArray(array){
 }
 
 console.log(maxArray([1,5,7,4,2,3]));
+
+//Fizz Buzz
+
+function fizzBuzz(num){
+    if(typeof(num) != 'number'){
+        return "Não é um número.";
+    }
+
+    if(num%3===0 && num%5===0){
+        return "FizzBuzz";
+    } else if(num%5==0){
+        return "Buzz";
+    } else if(num%3==0){
+        return "Fizz";
+    }
+    else{
+        return num;
+    }
+}
+
+console.log(fizzBuzz(1))
+
+function verificarVelocidade(velocidade){
+    const velocMax = 70;
+    if(velocidade <= velocMax)
+        return 'OK';
+    else{
+        let pontos= Math.floor((velocidade-velocMax)/5);
+        if (pontos>=12)
+            return 'Carteira Suspendida';
+        else
+            return `Pontos: ${pontos}`
+    }
+}
+
+console.log(verificarVelocidade(66))
+
+const filme= {
+    titulo: 'Vingadores',
+    diretor: 'Stan Lee',
+    ano: 2018,
+    estrelas: 8,
+    heroi: 'Thor',
+}
+
+function exibirPropriedade(obj){
+    for(i in obj){
+        if (typeof obj[i] === 'string')
+            console.log(i, obj[i]);
+    }
+}
+
+exibirPropriedade(filme);
+
+function somar(limite){
+    let multTres= 0;
+    let multCinco=0;
+    for(let i=0; i<=limite; i++){
+        if(i%3===0){
+            multTres+=i;
+            continue
+        }
+        if(i%5===0){
+            multCinco+=i;
+        }
+    }
+
+    return multTres + multCinco;
+}
+
+console.log(somar(10));
+
