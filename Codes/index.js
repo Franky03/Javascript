@@ -295,3 +295,31 @@ function somar(limite){
 
 console.log(somar(10));
 
+function printAsteristicos(num){
+    let ast= '';
+    for(let i= 1; i<=num; i++){
+        ast += '*';
+        console.log(ast); 
+    }
+}
+
+printAsteristicos(10);
+
+function numeroPrimo(num){
+        for(let j=2; j<Math.sqrt(num)+1; j++){
+            if(num%j===0){
+                return false;
+            }
+        }
+        return true;
+}
+
+function acharPrimos(lim){
+    for(let i=2; i<=lim;i++){
+        if(numeroPrimo(i)){
+            console.log(i);
+        }
+    }
+}
+
+acharPrimos(21);
