@@ -323,3 +323,42 @@ function acharPrimos(lim){
 }
 
 acharPrimos(21);
+
+//Factory Function
+
+function addBook(book_name, pages, year, author){
+    return {
+        book_name,
+        pages,
+        year,
+        author,
+        read(){
+            console.log("Reading book.");
+        }
+    }
+}
+const book= addBook("HarryPotter", 56, 2001, "J.K. Rowling");
+
+console.log(book);
+book.read()
+
+//Constructor Functions
+
+function Book(book_name, pages, year, author){
+    this.name= book_name,
+    this.pages= pages,
+    this.year= year,
+    this.author= author,
+    this.read = function() {
+        console.log("Reading book.");
+    }
+}
+
+const new_book= new Book("1984", 230, 1960, "George Orwell"); //Usar o new
+new_book.stars= 5;
+
+console.log(new_book);
+
+delete new_book.year; // Usar o delete
+console.log(new_book);
+
