@@ -77,3 +77,12 @@ form button:hover{
 .result{
   margin-top: 20px;
 }
+
+.paragrafo-resultado, .bad{
+  background: #3F979B;
+  padding: 10px 20px;
+}
+
+.bad {
+  background: #EFA3C8;
+}
